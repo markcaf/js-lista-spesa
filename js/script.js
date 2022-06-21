@@ -22,10 +22,17 @@ console.log(cartElement);
 
 // Ciclo while per creare in DOM gli elementi list-item, con aggiunta classi per lo stile
 let i = 0;
+
 while (i <= shopList.length - 1){
     const shopElement = document.createElement("button");
-    shopElement.classList.add("list-group-item", "list-group-item-action")
+    shopElement.classList.add("list-group-item", "list-group-item-action", "ms_button")
     shopElement.innerText = shopList[i];
+    
+    shopElement.addEventListener("click", function(){
+        shopElement.classList.add("active");
+    })
+
     cartElement.append(shopElement);
+    
     i++;
 };
