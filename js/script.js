@@ -29,7 +29,7 @@ while (i <= shopList.length - 1){
     shopElement.innerText = shopList[i];
     
     shopElement.addEventListener("click", function(){
-        shopElement.classList.add("active");
+        shopElement.classList.toggle("active");
     })
 
     cartElement.append(shopElement);
